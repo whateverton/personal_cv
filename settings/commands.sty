@@ -1,0 +1,10 @@
+\newcommand{\Icon}[1][]{%
+\rlap{{\makebox[1.5em][c]{{#1}}}\hspace{0.5em}}%
+}
+
+\newcommand{\cvsection}[2][]{%
+  \bigskip%
+  \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
+  {\color{heading}\cvsectionfont\MakeUppercase{\Icon{\csname #2Icon\endcsname}\hspace{0.5ex}\csname #2Text\endcsname}}\\[-1ex]%
+  {\color{headingrule}\rule{\linewidth}{2pt}\par}\medskip%
+}

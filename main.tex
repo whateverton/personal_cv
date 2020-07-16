@@ -1,0 +1,52 @@
+% ***************************** %
+% author: everton vilela        %
+% project: Example for LaTeX CV %
+% ***************************** %
+
+% Document Class
+% \documentclass[portuguese]{personal_cv}
+\documentclass[english]{personal_cv}
+% \documentclass[french]{personal_cv}
+
+%% Used packages
+\usepackage[utf8]{inputenc}
+\usepackage{paracol}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{fontawesome}
+\usepackage[babel]{csquotes}
+
+% good looking fonts
+%\usepackage{times}
+%\usepackage{roboto}
+\usepackage{tgadventor}
+
+%% Document
+\begin{document}
+
+\columnratio{0.5}
+\begin{paracol}{2}
+
+\dateofbirthIcon
+\phoneIcon
+\emailIcon
+\linkedinIcon
+\githubIcon
+
+\cvsection{experience}
+
+% Break into the second collumn
+\switchcolumn
+
+\addressIcon
+
+\cvsection{skills}
+
+\cvsection{languages}
+
+\cvsection{education}
+
+\end{paracol}
+
+\end{document}
