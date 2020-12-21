@@ -8,3 +8,11 @@
   {\color{heading}\cvsectionfont\MakeUppercase{\Icon{\csname #2Icon\endcsname}\hspace{0.5ex}\csname #2Text\endcsname}}\\[-1ex]%
   {\color{headingrule}\rule{\linewidth}{2pt}\par}\medskip%
 }
+
+\RequirePackage{tikz}
+
+\newcommand{\cvskill}[2]{%
+\textcolor{emphasis}{\textbf{#1}}\hfill
+\foreach \x in {1,...,5}{%
+  \space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{accent}}\ratingmarker}}\par%
+}
