@@ -3,8 +3,18 @@
 % project: Example for LaTeX CV %
 % ***************************** %
 
+% Read argument to set the language, default: ptbr
+% Example: pdflatex "\def\doclanguage{<language>} \input{main.tex}" -output-directory=<language> -jobname=EvertonVilela-<language>
+\ifdefined\doclanguage
+  % Didnt find out how to use 'not defined' in LaTex :(
+  \def\dummy{dummy}
+\else
+  \def\doclanguage{portuguese}
+\fi
+
 % Document Class
-\documentclass[portuguese]{personal_cv}
+\documentclass[\doclanguage]{personal_cv}
+% \documentclass[portuguese]{personal_cv}
 % \documentclass[english]{personal_cv}
 % \documentclass[french]{personal_cv}
 
