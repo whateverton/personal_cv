@@ -31,6 +31,7 @@
 \usepackage{graphicx}
 \usepackage{enumitem}
 \usepackage{fontawesome}
+\usepackage{fancyhdr}
 \usepackage[babel]{csquotes}
 
 % good looking fonts
@@ -39,6 +40,12 @@
 % \usepackage{tgadventor}
 % This one is nicer, removes serifa
 \usepackage[default]{lato}
+
+% Set centered footer, it needs to use fancy style
+\pagestyle{fancy}
+\fancyhf{}
+\chead{}
+\cfoot{\small{\footerText}}
 
 %% Document
 \begin{document}
@@ -88,7 +95,7 @@
 
 \cvsection{skills}
 
-Linguagem:\par
+\textbf{\proglangText}\par\smallskip
 \cvtag{C}
 \cvtag{C++}
 \cvtag{C\#}
@@ -99,7 +106,7 @@ Linguagem:\par
 
 \divider\smallskip
 
-Tools:\par
+\textbf{\toolsText}\par\smallskip
 \cvtag{Git}
 \cvtag{Mercurial}
 \cvtag{SVN}
@@ -107,17 +114,17 @@ Tools:\par
 
 \divider\smallskip
 
-Microcontroladores/Processadores:\par
-\cvtag{ARM Cortex A8 \& Cortex M family}\par
+\textbf{\ucText}\par\smallskip
+\cvtag{\ARMText}\par
 \cvtag{PIC32/16}
 \cvtag{8051}
-\cvtag{Atmega family}
+\cvtag{\AtmegaText}
 
 \cvsection{languages}
 
 \cvskill{\ptbrText}{5}
 \cvskill{\engText}{4}
-\cvskill{\frText}{3}
+\cvskill{\frText}{2}
 
 \cvsection{education}
 
