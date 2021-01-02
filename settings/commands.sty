@@ -16,3 +16,28 @@
 \foreach \x in {1,...,5}{%
   \space{\ifnumgreater{\x}{#2}{\color{body!30}}{\color{accent}}\ratingmarker}}\par%
 }
+
+\newcommand{\headeritem}[2][]{%
+  \if #1\empty%
+    \mbox{\personalinfofont{\Icon{\csname #2Icon\endcsname}\hspace{0.5ex}\csname #2Text\endcsname}\hspace{1em}}%
+  \else%
+    \mbox{\personalinfofont{\Icon{\csname #2Icon\endcsname}\hspace{0.5ex}\href{#1\csname #2Text\endcsname}{\csname #2Text\endcsname}}\hspace{1em}}%
+  \fi%
+}
+
+\newcommand{\cvheader}{%
+  \begingroup
+    \begin{minipage}{\dimexpr\linewidth}%
+    \raggedright%
+    {\namefont\color{name}\MakeUppercase{\name}\par}
+    \medskip
+    {\titlefont\color{title}\title\par}
+    \medskip
+    \headeritem{phone}
+    \headeritem{address}
+    \headeritem[https://www.linkedin.com/in/]{linkedin}
+    \headeritem[https://github.com/]{github}
+    \headeritem[mailto:]{email}
+    \end{minipage}\hfill%
+  \endgroup\medskip
+}

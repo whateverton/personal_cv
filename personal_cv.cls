@@ -16,8 +16,12 @@
 
 %% Process given options
 \ProcessOptions\relax
+
 \LoadClass{article}
 \RequirePackage{babel}
+\RequirePackage{hyperref}
+\RequirePackage[margin=2cm]{geometry}
+\hypersetup{hidelinks}
 
 % Packages
 \usepackage[utf8]{inputenc}
