@@ -1,3 +1,7 @@
+## Custom files/folders:
+./.vscode/
+./output/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
