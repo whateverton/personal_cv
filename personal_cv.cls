@@ -21,6 +21,7 @@
 \RequirePackage{babel}
 \RequirePackage{hyperref}
 \RequirePackage[margin=2cm]{geometry}
+\RequirePackage{dashrule}
 \hypersetup{hidelinks}
 
 % Packages
